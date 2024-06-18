@@ -10,8 +10,10 @@ This repository contains a data model and SQL queries for analyzing receipt data
 
 ### Key Points
 
-1. ReceiptItems: Added brandID column to reference Brands table and allow easy association of items with brands.
-2. Items: This table is optional and includes the itemID column to track individual items for future analytics. 
+1. ReceiptItems:
+   - Added brandID column to reference Brands table and allow easy association of items with brands.
+   - This table does not have a separate surrogate key (id). Instead, it relies on the combination of receiptId and itemId to uniquely identify each receipt item, maintaining the relationship with the Receipts table and avoiding unnecessary duplication.
+    2. Items: This table is optional and includes the itemID column to track individual items for future analytics. 
 
 ### Queries 
 - What are the top 5 brands by receipts scanned for most recent month?

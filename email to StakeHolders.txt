@@ -1,0 +1,34 @@
+Subject: Insights on Data Quality from Receipt Analysis Project - Require More Attention
+
+Hi Fetch Manager,
+
+I hope this message finds you well. I wanted to share some insights from our ongoing analysis of the receipt data, focusing on key data quality considerations and next steps:
+
+Data Quality Issues Identified:
+
+During our data analysis using Python and the pandas library, we identified critical data quality issues across our datasets. In the 'Receipts' data, significant missing values were observed in columns such as bonusPointsEarned, pointsEarned, and totalSpent, which are vital for understanding customer engagement and spending behavior. The 'Users' dataset revealed gaps in lastLogin and signUpSource fields, essential for user activity tracking and acquisition analysis. Additionally, the 'Brands' table exhibited missing data in the category and topBrand columns, potentially impacting our ability to categorize and market products effectively. In terms of data types, the totalSpent column in 'Receipts' is inconsistently stored as an object type, hindering accurate financial analysis. Addressing these issues is crucial for maintaining data integrity across our relational tables ('Receipts', 'ReceiptItems', 'Brands') and ensuring that foreign key references align correctly.
+
+Next Steps:
+Moving forward, I propose the following actions to address these data quality challenges:
+- Conduct a deeper dive into the root causes of missing data and inconsistent types, collaborating closely with the team to understand data entry practices and system integrations. 
+- Implement robust data validation checks and cleansing processes to rectify missing values and standardize data types for accurate analysis.
+- Explore additional metrics and validation criteria to optimize our data assets, ensuring they align with business objectives and insights.
+
+Further Insights Needed:
+To optimize our data strategy effectively, I would appreciate your insights on:
+- Clear understanding of the intended data structure and standards for each column, including expected data types and formats.
+- Collaboration with data teams to validate and correct missing or inaccurate data.
+- Implementation of data validation checks and cleansing processes to ensure data integrity.
+
+Before coming to any conclusion I have following questions that will help me understand more about the data. The following are questions
+- Are there specific business rules or criteria used during data entry that could explain missing values or inconsistent data types?
+- How often are data updates or additions made to ensure the information is current and reflective of ongoing operations?
+
+I also have anticipate some concerns regarding scaling and performance,as we anticipate significant growth in data volume, particularly with ongoing transactions and user interactions, we recognize the importance of robust performance and scalable infrastructure. Transitioning to a cloud-based architecture offers several advantages, including flexible scalability to accommodate increasing data demands seamlessly. Implementing a more robust data warehousing solution will be pivotal in optimizing storage, improving query performance, and ensuring data accessibility and reliability. Additionally, leveraging open-source tools for ETL pipelines and data warehousing, such as Apache Airflow for workflow management and Apache Hadoop or Apache Spark for data processing, can further enhance efficiency and flexibility in managing our expanding data ecosystem. This approach not only supports current operational needs but also prepares us for future scalability requirements effectively.
+
+Your guidance on these points will be invaluable as we refine our approach to leveraging data for actionable business insights.
+
+Please let me know your availability for a discussion or if there are specific areas you'd like to prioritize.
+
+Best regards,
+Sankarshana Dorbala

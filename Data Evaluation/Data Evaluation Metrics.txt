@@ -1,0 +1,52 @@
+Data Quality Issues and Discovery Process
+
+Through the analysis of the provided data using Python and the pandas library, the following data quality issues were identified:
+
+1. Missing Values:
+   - In the 'reciept_df' DataFrame, several columns have a significant number of missing values (NaN or None):
+     - bonusPointsEarned
+     - bonusPointsEarnedReason
+     - finishedDate
+     - pointsAwardedDate
+     - pointsEarned
+     - purchaseDate
+     - purchasedItemCount
+     - rewardsReceiptItemList
+     - totalSpent
+
+   - In the 'users_df' DataFrame, the following columns have missing values:
+     - lastLogin
+     - signUpSource
+     - state
+
+   - In the 'Brands_df' DataFrame, the following columns have missing values:
+     - category
+     - categoryCode
+     - topBrand
+
+   These missing values were identified by examining the output of the 'info()' method on each DataFrame, which displays the count of non-null values for each column.
+
+2. Inconsistent Data Types:
+   - In the 'reciept_df' DataFrame, the 'totalSpent' column is an object data type, which is inconsistent with the expected numeric data type for representing monetary values.
+
+   - In the 'Brands_df' DataFrame, the 'topBrand' column is an object data type, which is inconsistent with the expected boolean data type for representing true/false values.
+
+   The inconsistent data types were identified by examining the output of the 'info()' method on each DataFrame, which displays the data types of each column.
+
+3. Potential Duplicate Data:
+   While the analysis did not specifically identify duplicate entries, duplicate data is a common data quality issue that should be investigated, especially for unique key columns.
+
+4. Data Integrity Issues:
+   - There may be referential integrity issues, where foreign key values in the 'ReceiptItems' table do not match the corresponding primary keys in the 'Receipts' or 'Brands' tables.
+
+   - There may also be inconsistencies in related data across different tables, such as mismatched values for the same entity in different tables.
+
+   These potential data integrity issues were not directly identified in the provided analysis but should be further investigated by examining the relationships between the tables and comparing related data across different tables.
+
+To discover these data quality issues, the following steps were taken:
+1. The provided data was loaded into pandas DataFrames using appropriate data parsing techniques.
+2. The 'info()' method was called on each DataFrame to examine the column names, data types, and non-null value counts.
+3. The output of the 'info()' method was analyzed to identify missing values and inconsistent data types.
+4. Considerations were made for potential duplicate data and data integrity issues based on the relational nature of the data and the presence of unique and foreign key columns.
+
+Further analysis should be done such as identifying outliers, checking for invalid values, analyzing data distributions, performing consistency checks for better datawarehouse solution.

@@ -8,6 +8,8 @@ This repository contains a data model and SQL queries for analyzing receipt data
 - ReceiptItems
 - Items
 
+![image](https://github.com/user-attachments/assets/037075f1-f60f-420e-ac9a-6f6819bafaad)
+
 ### Key Points
 
 1. ReceiptItems:
